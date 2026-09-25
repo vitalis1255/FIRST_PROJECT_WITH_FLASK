@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Home - DevHub Academy{% endblock%}
+
+{% block content %}
+
+<h1>Welcome to DevHub Academy</h1>
+<p>
+  Empowering the next generation of software developers and digital creators
+</p>
+
+<!--Create a horizontal line-->
+<hr />
+
+<!--Linke the page for your courses here in the home page-->
+<a href="{{url_for('courses')}}" class="home-link">Browse Available Courses</a>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Courses Catalog{% endblock %}
+
+{% block content %}
+<h2>Course Catalog</h2>
+ <p>Filter by category:
+   <a href="{{url_for('courses')}}">All</a>
+   <a href="{{url_for('courses',category='Backend')}}">Backend</a> | <!--/courses?category=backend-->
+   <a href="{{url_for('courses',category='Frontend')}}">Frontend</a> |
+   <a href="{{url_for('courses',category='Design')}}">Design</a>
+  </p>backend
+
+ <!--horizontal line-->
+ <hr>
+
+
+ <!--Use of jinja2 in HTML for python-->
+ <!--courses is the function in the python environment that filtered_courses were stored.-->
+ {% for course in courses %}
+    <div class="card">
+      <h3><a href="{{url_for('course_detail',course_id=course_id)}}">{{course.title}}</a> </h3>
+      <p><strong>Category:</strong>{{course.category}} | <strong>Level:</strong>{{course.level}}</p> 
+      
+      <!--Conditional styling based on status-->
+      {% if course.status == "Active" %}
+        <span class="badge-active">Enrollment Open</span>
+      {% else %}
+        <span class="badge-pending">Coming Soon</span>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+
+{% endblock %}

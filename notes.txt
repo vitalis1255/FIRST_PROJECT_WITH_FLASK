@@ -1,0 +1,8 @@
+category_filter = request.args.get("category"):This line retrieves the value of the category parameter from the URL and stores it in the variable category_filter.
+
+request.args: Accesses query parameters in the URL.
+
+.get("category"): Retrieves the value of the category parameter.
+
+category_filter: Stores the retrieved value.
+Everything happening in the HTML is referring to the backend python
