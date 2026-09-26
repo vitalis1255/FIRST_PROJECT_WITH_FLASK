@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% blobk title %}Contact Us{% endblock %}
+
+{% block content %}
+  <h2>Student Inquiry Form</h2>
+  {% if success %}
+    <div class="form-success">
+      Thank you, <strong>{{ name }}</strong> ! Your message has been received successfully.
+    </div>
+  {% endif %}
+
+  <form method="POST">
+    <div class="form-control">
+      <label>Your Name:</label><br>
+      <input type="text" name="name" required>
+    </div>
+    <div class="form-control">
+      <label>Email Address:</label><br>
+      <input type="email" name="email" required>
+    </div>
+    <div class="form-control">
+      <label>Message/Question:</label><br>
+      <textarea name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+
+
+{% endblock %}

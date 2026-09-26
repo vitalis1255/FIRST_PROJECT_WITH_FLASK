@@ -38,6 +38,33 @@ def courses():
   return render_template("courses.html", courses=filtered_courses)
 
 
+#Using ID to get each course
+@app.route("/course/<int:course_id>")#api for course_detail
+def course_detail(course_id):
+  #Find a matching integer ID
+  # course = [c for c in COURSES if c["id"] == course_id[0]]
+  course = next((c for c in COURSES if c["id"] == course_id))
+
+  if not course:
+    return "Course Not Found",404
+
+  return render_template("course_detail.html",course=course)#help to display course details in the html.
+
+
+#api for contact
+@app.route("/contact", methods=["GET","POST"])
+def contact():
+  success = False
+  name = " "
+
+  if request.method == "POST":
+    # Extract the data submitted in the form
+    name = request.form.get("name")
+    success = True
+
+  return render_template("contact.html",success=success,name=name)
+
+
 
 
 

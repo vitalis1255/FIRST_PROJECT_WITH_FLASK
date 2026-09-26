@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{% block title %}{{course.title}}{%endblock%}
+
+{% block content%}
+
+  <!--Display the detail of each category-->
+  <h1>{{course.title}}</h1>
+  <p><strong>Category:</strong>{{course.category}}</p>
+  <p><strong>Difficulty Level:</strong>{{course.level}}</p>
+  <p><strong>Status:</strong>{{course.status}}</p>
+
+  <!--Horizontal line-->
+  <hr>
+
+  <p>This comprehensive module takes you through hands-on exercises and practical implementations.</p>
+
+  <!--Link to go back to main courses page-->
+  <!--Using &larr; to display a left-pointing arrow symbol-->
+  <a href="{{url_for('courses')}}">&larr; Back to Catalog</a>
+
+
+{% endblock %}

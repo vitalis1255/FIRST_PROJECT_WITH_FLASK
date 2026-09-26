@@ -6,3 +6,20 @@ request.args: Accesses query parameters in the URL.
 
 category_filter: Stores the retrieved value.
 Everything happening in the HTML is referring to the backend python
+Avariable that contains an item or a value should be in {{}}
+It is important to know that the name of your function in the backend is the same name for your HTML page.
+
+course = next((c for c in COURSES if c["id"] == course_id)): Breaking it down:
+for c in COURSES → go through each course in COURSES.
+if c["id"] == course_id → check whether the course ID matches course_id.
+c → represents the matching course.
+next(...) → returns the first matching course.
+course = → stores that course in the variable course.
+
+<br> insert a single line break in a block of text.
+
+The base.html that controls other html pages does not need to be render_template in the backend.
+
+<meta charset="UTF-8"> This tells a web browser which character encoding to use when displaying text on an HTML webpage.
+
+meta name="viewport" content="width=device-width, initial-scale=1.0"> is an HTML element that tells mobile browsers how to adjust a web page's size and scaling to fit the device's screen.
