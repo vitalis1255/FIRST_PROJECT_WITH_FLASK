@@ -23,3 +23,9 @@ The base.html that controls other html pages does not need to be render_template
 <meta charset="UTF-8"> This tells a web browser which character encoding to use when displaying text on an HTML webpage.
 
 meta name="viewport" content="width=device-width, initial-scale=1.0"> is an HTML element that tells mobile browsers how to adjust a web page's size and scaling to fit the device's screen.
+
+<header></header> is used for items that will be in the top heading of a page. <Header> stays at the top of body of a web page.
+
+<footer> stays at the bottom of the body of a web page
+
+<nav> is a block level element
