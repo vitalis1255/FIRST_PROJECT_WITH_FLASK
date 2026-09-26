@@ -18,7 +18,7 @@
  <!--courses is the function in the python environment that filtered_courses were stored.-->
  {% for course in courses %}
     <div class="card">
-      <h3><a href="{{url_for('course_detail',course_id=course_id)}}">{{course.title}}</a> </h3>
+      <h3><a href="{{url_for('course_detail',course_id=course.id)}}">{{course.title}}</a> </h3>
       <p><strong>Category:</strong>{{course.category}} | <strong>Level:</strong>{{course.level}}</p> 
       
       <!--Conditional styling based on status-->

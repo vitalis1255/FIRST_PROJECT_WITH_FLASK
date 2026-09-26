@@ -24,8 +24,29 @@ The base.html that controls other html pages does not need to be render_template
 
 meta name="viewport" content="width=device-width, initial-scale=1.0"> is an HTML element that tells mobile browsers how to adjust a web page's size and scaling to fit the device's screen.
 
-<header></header> is used for items that will be in the top heading of a page. <Header> stays at the top of body of a web page.
+<header></header> is used for items that will be in the top heading of a page. <header></header> is for  the top of body of a web page.
 
 <footer> stays at the bottom of the body of a web page
 
 <nav> is a block level element
+
+&copy; displays the copyright symbol @ on a web page.
+
+for css;
+body{
+  margin:0;
+  padding:0;
+}
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div> All the whole html pages will inherit the properties given to class container.
+
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); Breakdown of the 
+0: Horizontal offset: no shadow movement to the left or right.
+4px:Vertical offset: moves the shadow 4 pixels downward.
+6px: Blur radius: makes the shadow soft and spread out.
+rgba(0, 0, 0, 0.05): Shadow colour: black with 5% opacity, making it very faint.
+
+The main difference between background-color and background is that background is a shorthand property that can set multiple background styles at once, while background-color is a long hand property used exclusively to set a solid background color.
